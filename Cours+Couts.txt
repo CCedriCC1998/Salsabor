@@ -1,0 +1,29 @@
+Accès à l'application de test :
+192.168.0.150 / patrick / Abricotier
+
+// PRIORITAIRE //
+
+Planning de cours :
+- Ajouter les créneaux fixes FORPRO et élèves.
+=> COURS PRIORITAIRES SUR RESERVATIONS (Half-done)
+
+Réservation de salles :
+- Doit pouvoir indiquer la raison de la réservation, la personne qui a demandé la réservation, le type de réservation (cours particulier, répétition, cours collectifs, Enterrements de vie de jeune fille/jeune garçon), et si la réservation est payée ou libre.
+
+// NON-PRIORITAIRE //
+
+Présence à l'accueil :
+- Savoir qui est présent à l'accueil à tout moment
+
+Gestion du staff :
+- Certains professeurs donnent des cours à l'extérieur
+- Chaque professeur a ses tarifs en fonction de l'activité
+
+Calculateur :
+- Donne les valeurs d'argent à payer à un professeur en fonction de telle ou telle activité.
+- CHAQUE ACTIVITE D'UN PROFESSEUR DOIT ÊTRE MARQUEE COMME PAYEE OU NON.
+- Prévisionel des montants à payer
+
+// MARS 2016 //
+-> Moteur de recherche et insertion de caractères : restreindre les caractères non supportés
+-> Modifier les échéanciers
