@@ -1,0 +1,111 @@
+.panel-item
+	margin-bottom: 10px
+	display: inherit
+	padding-left: 0
+	padding-right: 0
+	&:not(.panel-room)
+		p
+			padding: 10px
+			margin-top: 2px
+			margin-bottom: 0
+	a
+		color: black
+		text-decoration: none
+
+.panel-item-title
+	font-weight: 700
+
+.panel-subtitle
+	font-size: 14px
+	font-weight: 600
+
+.panel-record
+	text-align: center
+	padding: 5px
+	height: 350px
+	cursor: default
+
+.irregular-record
+	text-align: inherit
+	@extend .panel-record
+	padding: 10px
+	height: auto
+	.irregular-record-details
+		text-align: center
+
+.panel-add-record
+	cursor: pointer
+	border-radius: 0
+	+status-border(3px, $empty-container-color)
+	&:hover
+		background-color: $empty-container-color
+		.empty-pp
+			border-color: white
+
+.personal-participation-title
+	padding-left: 20px !important
+
+.panel-search
+	background-color: lighten($system-color, 80%)
+
+.search-title
+	@extend .sub-legend
+
+.user-entry
+	font-size: 18px
+	min-height: 150px
+	padding: 30px 15px 30px 15px
+	border-radius: 5px
+	word-wrap: break-word
+	&:hover
+		background-color: lighten($system-color, 40%)
+	a
+		text-decoration: none
+		color: black
+	a:hover
+		text-decoration: none
+		color: black
+	.panel-item-title
+		font-size: 24px
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+
+.user-archived
+	background-color: lighten($system-color, 20%)
+	img
+		opacity: 0.5
+	.user-entry
+		a
+			color: $system-color
+
+.irregular-user
+	@extend .purchase-id
+	margin-top: 0 !important
+	&:hover
+		color: black
+
+.panel-room
+	.panel-body
+		position: relative
+
+.panel-product-container
+	min-height: 240px
+
+.panel-promotion
+	padding: 10px
+	.promotion-details
+		padding-left: 20px
+	&.promotion-running
+		background-color: $salsabor-yellow
+		font-size: 1.2em
+		.promotion-title
+			font-size: 20px
+	&.promotion-over
+		background-color: darken(white, 15%)
+		color: $system-color
+	&.promotion-upcoming
+		background-color: $pre-success-color
+
+.promotion-value
+	font-weight: 700

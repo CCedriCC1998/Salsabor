@@ -1,0 +1,1221 @@
+$salsabor-red: #A80139
+$salsabor-yellow: #FAB913
+$system-color: #888888
+$pre-success-color: #79C3E5
+$success-color: #87CE77
+$warning-color: #F0AD4E
+$danger-color: #D9534F
+$pending-color: #9491D6
+$near-danger-color: #F0684B
+$empty-container-color: #888888
+$body-color: #E9EBEE
+$light-red-color: lighten($danger-color, 20%)
+$break-small : 360px
+$break-medium: 768px
+$break-large: 1024px
+$avatar-very-small: 65px
+$avatar-size-preview: 120px
+$avatar-big-preview: 170px
+@import 'status'
+@import 'panel-items'
+@import 'holders'
+@import 'calendar'
+
+=circle-size($radius)
+	height: $radius !important
+	width: $radius !important
+	border-radius: $radius/2 !important
+	overflow: hidden !important
+	padding: 0 !important
+
+/** ADJUSTMENT TOOLS **/
+.align-right
+	text-align: right
+
+.no-padding
+	padding: 0 !important
+
+.no-margin
+	margin: 0 !important
+
+.no-overflow
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+
+body
+	@media screen and (min-width: $break-medium)
+		margin-top: 50px
+	background-color: $body-color
+
+.chart
+	background-color: $body-color !important
+
+a
+	color: $salsabor-red
+
+.disabled
+	cursor: not-allowed !important
+
+.link-alt
+	color: inherit
+	text-decoration: none
+	&:hover
+		text-decoration: none
+
+.unsolved
+	font-weight: 700
+
+.solved
+	font-weight: 500
+	color: inherit
+
+.popover
+	z-index: 1060
+
+::-webkit-scrollbar
+	background-color: transparentize($salsabor-red, 0.7)
+	z-index: -1
+	width: 6px
+
+::-webkit-scrollbar-thumb
+	background-color: $salsabor-red
+	border-radius: 10px
+
+.main
+	@media screen and (min-width: $break-medium)
+		padding-top: 40px !important
+	padding: 0 4% 20px
+	position: relative
+	overflow: auto
+	min-height: 70vh
+
+.portal-main
+	background-size: 100%
+	height: 100%
+	.layer
+		background: transparentize(white, 0.9)
+		height: 100%
+
+.no-account
+	color: white !important
+	text-align: center
+
+.form-control-portal
+	background-color: transparent !important
+	color: $salsabor-red
+	border-radius: 0 !important
+	border: 1px solid $salsabor-red
+	border-top: 0
+	&:focus
+		box-shadow: none
+		outline: inherit
+		border-color: $salsabor-red
+
+legend
+	color: $salsabor-red
+	font-size: 28px
+	@media screen and (max-width: $break-medium)
+		font-size: 22px
+	font-family: 'globersemibold_free'
+	a, input, button
+		float: right
+
+.input-group > .form-control
+	z-index: 0 !important
+
+.not-allowed
+	cursor: not-allowed
+
+.nav-tabs
+	margin-bottom: 10px !important
+
+/** LABELS **/
+.user-labels
+	padding-bottom: 10px
+	margin-top: -10px
+	font-size: 1.3em
+
+.label-salsabor
+	background-color: $salsabor-red
+	&:hover
+		background-color: lighten($salsabor-red, 10%)
+	&.label-in-modal
+		cursor: default
+		margin-right: 5px
+		display: inline-block
+
+.label-active
+	font-size: 0.65em
+	margin-bottom: 5px
+	padding-top: 0
+	padding-bottom: 0
+	cursor: default
+
+.label-soon
+	background-color: $salsabor-yellow
+	color: darken($salsabor-yellow, 20%)
+
+.label-ongoing
+	background-color: $success-color
+	color: darken($success-color, 20%)
+
+.shine
+	text-shadow: 0px 0px 18px #fff
+	color: white
+
+.label-display-only
+	&:not(:first-child)
+		margin: 5px
+
+.label-add
+	margin-left: 5px
+
+.label-clickable
+	cursor: pointer
+
+.label-addable, .label-restyle, .label-manual
+	margin-bottom: 5px
+	text-align: left
+	padding-top: .5em
+	padding-bottom: .5em
+
+.label-add
+	&:hover
+		background-color: darken($system-color, 20%)
+
+.label-prestation
+	background-color: #FF993D
+
+#colors
+	margin-top: 5px
+	text-align: center
+
+.color-cube
+	height: 30px
+	border-radius: 4px
+	margin: 5px
+	cursor: pointer
+
+.color-selected
+	color: white
+	padding: .4em .3em .3em .3em
+
+.sub-legend
+	@extend legend
+	font-size: 19px
+	&.top-divider
+		margin-top: 20px
+
+.big-legend
+	@extend legend
+	font-size: 72px
+
+a
+	text-decoration: none
+	&:hover, &:focus, &:active
+		color: $salsabor-red
+
+.textcomplete-dropdown, .dropdown-custom
+	z-index: 1062 !important
+	li
+		&.active
+			background-color: $salsabor-red !important
+			a
+				background-color: $salsabor-red
+		&:hover
+			background-color: $salsabor-red !important
+		a
+			&:hover
+				background-color: $salsabor-red !important
+				color: white
+	&.active
+		background-color: $salsabor-red !important
+
+.dropdown-menu
+	&:hover
+		background-color: white !important
+
+.editable
+	cursor: pointer
+	&:hover
+		text-decoration: underline
+
+.trigger-editable
+	@extend .editable
+
+.inline-editable
+	&:nth-child(1n+0)
+		display: inline-flex
+	p:first-child
+		margin-right: .15em
+
+.archived-state
+	color: $system-color !important
+	font-size: 12px !important
+
+.edit-input
+	position: relative
+	width: 25%
+	margin-bottom: 15px
+	margin-top: -10px
+	background-color: transparent
+	border: 2px solid
+	border-top: none
+	border-radius: 0
+
+/** SIDE MENU **/
+.sidebar-container
+	position: relative
+
+.small-sidebar-container
+	display: none
+
+.sidebar
+	position: fixed
+	background-color: $body-color
+	color: black
+	padding: 10px 0 20px 0
+	overflow-y: scroll
+	height: 94.5vh
+	z-index: 1000
+	@media screen and (max-width: $break-small)
+		background-color: $salsabor-red
+		color: white !important
+	.sub-menu-toggle
+		font-size: 1em
+
+#small-menu
+	top: 0
+	height: 100%
+	background-color: $salsabor-red
+	.main-option, .main-option>.glyphicon
+		color: white
+
+.main-section
+	font-weight: 800
+	text-transform: uppercase
+	cursor: default
+	color: black
+	&:hover
+		color: black !important
+	&:focus
+		color: white !important
+
+.nav-sub-sidebar
+	color: black
+	padding-bottom: 20px
+
+.main-option
+	color: black
+	font-weight: 600
+	font-size: 17px
+	font-family: 'globersemibold_free'
+	&:hover
+		background-color: white !important
+		color: black
+	span
+		padding-right: 20px
+		color: $salsabor-red
+
+/** NAV **/
+.navbar
+	background-color: $salsabor-red
+	border: 0
+	box-shadow: 0 2px 10px $system-color
+
+.navbar-toggle
+	border: 0
+	background-color: inherit !important
+
+.sub-menu-toggle
+	color: white
+	font-size: 2.5em
+
+.navbar-brand
+	margin-top: 13px
+	@media screen and (min-width: $break-medium)
+		margin-top: 0
+
+.dropdown-toggle
+	&:not(.btn-default)
+		background-color: $salsabor-red !important
+
+.navbar-right
+	margin-right: 0
+
+.navbar-collapse
+	border: 0
+	padding: 0 !important
+	.navbar
+		margin-bottom: 0
+
+.small-nav
+	color: white
+	text-align: center
+
+.notification-icon
+	color: white !important
+	font-size: 19px
+	cursor: pointer
+	&:hover
+		color: $salsabor-yellow !important
+	span.glyphicon
+		z-index: -1
+	span.badge
+		margin-left: -13px
+		padding: 2px 3px
+		background-color: darken($salsabor-yellow, 10%)
+		border-radius: 5px
+
+.sidebar-badge
+	float: right
+	padding: 5px !important
+	color: white !important
+	background-color: darken($salsabor-yellow, 10%)
+	border-radius: 5px
+
+.navbar-form
+	margin-left: 22px
+	.input-group
+		span
+			@extend .nav-input
+
+.nav-input
+	background-color: lighten($salsabor-red, 4%)
+	color: white
+	font-size: 17px
+	border: 0
+	border-radius: 0
+	&:hover
+		background-color: lighten($salsabor-red, 7%)
+	&:focus
+		background-color: lighten($salsabor-red, 11%)
+		border-color: $salsabor-yellow
+		box-shadow: inset 0 1px 1px $salsabor-yellow, 0 0 8px lighten($salsabor-yellow, 10%)
+		//box-shadow: none !important
+
+/** SUB NAV **/
+.fixed
+	background-color: transparentize(darken($salsabor-red, 2%), 0.01)
+
+/** JUMBOTRON **/
+.main-home
+	padding: 0
+
+.jumbotron-home
+	border-radius: 0 !important
+	text-align: center
+	background-color: white
+
+.admin-buttons
+	margin-bottom: 10px
+
+#jumbotron-btns
+	a
+		margin: 10px
+
+/** PAGE **/
+.page-title
+	font-family: 'globersemibold_free'
+	font-size: 28px
+	padding: 0
+	margin: 1px 0 0 0
+
+.dashboard-zones
+	padding-bottom: 10px
+	margin-bottom: 20px
+	box-shadow: 0 5px 5px -2px $system-color
+	.sub-legend
+		text-align: center
+	.dashboard-notifications-container, .tasks-container
+		margin-bottom: 0
+		height: 350px
+		overflow-y: scroll
+		background-repeat: no-repeat
+		background-position: center
+
+.quick-access
+	margin: 20px 15% -20px
+	overflow: hidden
+	@media all and (max-width: $break-large)
+		margin-left: 5%
+		margin-right: 5%
+	li
+		width: 20%
+		font-size: 2em
+		float: left
+
+.quick-access-list
+	padding-left: 0
+	list-style: none
+
+.glyphicon-text
+	font-size: 0.6em
+	display: block
+	text-align: center
+	word-wrap: break-word
+	@media all and (max-width: $break-large)
+		display: none
+
+/** BUTTONS **/
+.btn-primary
+	background-color: $salsabor-yellow !important
+	border-color: darken($salsabor-yellow, 5%) !important
+	color: black !important
+	&:hover
+		background-color: darken($salsabor-yellow, 5%) !important
+
+.btn-danger
+	span
+		color: white
+
+.btn-info
+	background-color: $salsabor-red
+	border-color: lighten($salsabor-red, 1%)
+	&:hover
+		background-color: darken($salsabor-red, 3%)
+		border-color: lighten($salsabor-red, 1%)
+	&:active, &:focus
+		background-color: darken($salsabor-red, 7%)
+		border-color: lighten($salsabor-red, 1%)
+
+.btn-link-all
+	margin-bottom: 10px
+
+.float-right
+	float: right
+
+.link-glyphicon
+	color: black
+	&:hover
+		text-decoration: none !important
+
+.glyphicon-button
+	cursor: pointer
+	&:hover
+		color: white
+
+.glyphicon-button-alt
+	&:hover
+		color: $salsabor-red !important
+
+.glyphicon-button-big
+	font-size: 18px
+	margin-top: 10px
+
+.glyphicon-button-disabled
+	color: $system-color
+
+/** PURCHASES **/
+.panel-purchase
+	box-shadow: 0px 0px 10px $system-color
+	border: 0
+	.panel-heading-container
+		text-decoration: none
+		color: black
+		&:hover
+			color: black
+	.panel-heading
+		background-color: white
+		text-decoration: none
+		cursor: pointer
+		p
+			margin-top: 10px
+	.panel-body
+		border-top: 1px solid lighten($system-color, 35%)
+	.session-option>span
+		&:hover
+			color: $salsabor-red
+
+.purchase-subtitle
+	font-weight: 600
+	color: $salsabor-red
+	font-size: 18px
+
+.purchase-id, .session-id, .product-title
+	font-size: 17px
+	font-weight: 600
+
+.product-title
+	margin-bottom: 0
+	height: 48px
+
+.purchase-sub
+	font-style: italic
+
+.bf
+	font-size: 18px
+
+.purchase-product-subdetails>p
+	padding-top: 0 !important
+
+.list
+	padding: 0
+
+.purchase-product-list-container
+	margin-bottom: 20px
+
+.purchase-inside-list
+	padding-left: 0
+
+.purchase-item-options
+	padding: 0 0 20px 30px
+
+.maturity-item
+	cursor: default
+
+.item-pending
+	background-color: $pre-success-color
+	&:hover
+		background-color: darken($pre-success-color, 10%)
+
+.item-expired
+	background-color: darken(white, 5%)
+	color: darken(white, 30%)
+
+.item-active
+	background-color: $success-color
+	&:hover
+		background-color: darken($success-color, 10%)
+
+.item-near-activation
+	background-color: $pending-color
+	&:hover
+		background-color: darken($pending-color, 10%)
+
+.item-near-expiration
+	background-color: lighten($success-color, 30%)
+	&:hover
+		background-color: darken($success-color, 10%)
+
+.item-overconsumed
+	&:hover
+		background-color: $danger-color
+
+.item-overused
+	@extend .item-overconsumed
+	background-color: lighten($danger-color, 20%)
+
+.item-available
+	&:hover
+		background-color: darken(white, 10%)
+
+.status-icon
+	text-align: center
+	color: $system-color
+	cursor: pointer
+	&:hover
+		color: darken($system-color, 30%)
+
+.icon-success
+	color: $success-color
+	&:hover
+		color: darken($success-color, 20%)
+
+.maturitys-list > li
+	display: inherit
+
+/** PRODUCT MODAL **/
+.btn-modal
+	text-align: left
+	font-weight: 600
+	span
+		font-weight: 400
+		color: $salsabor-red
+	&.status-enabled
+		background-color: $salsabor-red
+		color: white
+		span
+			color: white
+	&.status-disabled:hover
+		background-color: transparentize($salsabor-red, 0.7)
+	&.disabled
+		background-color: $system-color
+
+.modal-body-title
+	font-size: 20px
+	font-weight: 600
+
+.modal-actions-container
+	padding-left: 0
+
+.modal-purchase
+	padding-left: 0
+	padding-right: 0
+	.purchase-details-container
+		padding-left: 0
+		padding-right: 0
+
+.product-status-container
+	border-radius: 8px
+	box-shadow: 0 0 10px $system-color
+	height: 120px
+	padding: 10px
+	text-align: center
+
+.product-status, .maturity-status
+	text-align: left
+	p
+		font-size: 18px
+		font-weight: 700
+		.glyphicon
+			padding-right: 10px
+			color: $salsabor-red
+
+.highlighted-value
+	font-size: 22px
+	font-weight: 600
+	color: $salsabor-red
+
+.product-participation
+	@extend .panel-item
+	padding: 1px 5px
+	margin-bottom: 5px
+	cursor: pointer
+	p.session-title
+		margin-top: 0
+		font-weight: 600
+	p.session-hours
+		margin-top: -10px
+		padding-top: 0
+
+.panel-item-options
+	@media screen and (max-width: $break-large)
+		text-align: center
+
+#over-session-alert
+	font-weight: 600
+	color: $system-color
+	text-decoration: underline
+
+.participation-type
+	cursor: pointer
+	padding: 5px
+	border-radius: 4px
+	text-align: center
+	&:hover
+		background-color: darken($body-color, 5%)
+
+.participation-count
+	font-weight: 700
+	color: $salsabor-red
+	font-size: 1.2em
+
+.participation-pending
+	border-left: 7px solid $pre-success-color
+	&:not(.options-shown)
+		&:hover
+			background-color: $pre-success-color
+
+.participation-valid
+	border-left: 7px solid $success-color
+	&:not(.options-shown)
+		&:hover
+			background-color: $success-color
+
+.participation-over
+	border-left: 7px solid $light-red-color
+	&:not(.options-shown)
+		&:hover
+			background: $light-red-color
+		&:active
+			background: darken($light-red-color, 10%)
+
+.session-options, .maturity-options
+	background: white
+
+h2.modal-body-title.first
+	margin-top: 0
+
+/** SUB MODAL **/
+.sub-modal
+	z-index: 1051
+	position: absolute
+	left: 464px
+	background-color: white
+	border-radius: 4px
+	display: none
+	padding: 10px
+	box-shadow: 2px 2px 10px $system-color
+
+.sub-modal-header
+	border-bottom: 1px solid $system-color
+
+.sub-modal-body
+	position: relative
+	padding-top: 10px
+	max-height: 350px
+	overflow-y: scroll
+
+.sub-modal-footer
+	padding-top: 5px
+
+.sub-modal-product
+	display: inherit
+	cursor: pointer
+	padding: 10px
+	margin: 5px 0
+	span.glyphicon-ok
+		float: right
+	p
+		margin-bottom: 0
+
+.smp-title
+	font-size: 18px
+	font-weight: 700
+
+.sub-modal-notification
+	position: fixed
+	@extend .sub-modal
+	z-index: 99999
+	overflow-x: hidden
+	border-radius: 0
+
+.smn-body
+	overflow-y: scroll
+	height: 350px
+	-moz-box-shadow: inset 0px -4px 10px 1px $system-color
+	-webkit-box-shadow: inset 0px -4px 10px 1px $system-color
+	-o-box-shadow: inset 0px -4px 10px 1px $system-color
+	box-shadow: inset 0px -4px 10px 1px $system-color
+	.glyphicon-button
+		color: transparentize($salsabor-red, 0.6)
+		&:hover
+			color: white
+
+.notif-texts
+	width: 90%
+
+.smn-footer
+	text-align: center
+	padding-top: 10px
+
+/** CATALOGUE **/
+.panel-product
+	background-color: white
+
+.product-description
+	min-height: 80px
+
+.tags-display
+	height: 40px
+
+.product-price
+	font-size: 21px
+	color: $salsabor-red
+	text-align: right
+
+/** IRREGULARS **/
+.irregulars-target-container
+	border-left: 1px
+	border-left-style: dashed
+	border-left-color: $system-color
+	padding-bottom: 20px
+	height: 75.5vh
+	position: fixed
+	left: 71.5%
+	overflow-y: scroll
+
+.irregulars-list
+	padding: 0
+
+.irregular-participation
+	cursor: pointer
+	display: inherit
+	padding: 10px
+	margin-top: 5px
+	margin-bottom: 5px
+	&:hover
+		background-color: darken(white, 10%)
+	&:active
+		background-color: darken(white, 20%)
+	&.focused
+		font-weight: 700
+		background-color: darken(white, 5%)
+		&:hover
+			background-color: darken(white, 10%)
+	p
+		margin-bottom: 0
+
+/** ACTIVE SESSIONS **/
+.panel-session
+	@extend .panel-purchase
+
+/** PARTICIPATIONS **/
+.participations-list
+	@extend .purchase-inside-list
+
+/** USER PAGE **/
+.user-banner
+	height: $avatar-big-preview
+	margin-bottom: 15px
+
+.user-pp
+	+circle-size($avatar-big-preview)
+	float: left
+	margin-right: 15px
+
+.small-user-pp
+	+circle-size($avatar-size-preview)
+	margin: 0 auto
+	img
+		width: inherit
+
+.notif-pp
+	+circle-size($avatar-very-small)
+	float: left
+	img
+		width: inherit
+
+.empty-pp
+	border: 2px dashed $empty-container-color
+
+.nav-img-container
+	padding-top: 7px !important
+	padding-bottom: 0 !important
+
+.nav-pp
+	+circle-size(35px)
+	float: left
+	padding: 5px
+	margin-bottom: 8px
+	img
+		width: inherit
+
+.user-summary
+	padding-left: $avatar-big-preview + 20px
+
+#profile-picture-sample
+	+circle-size($avatar-size-preview)
+	border: 2px solid #444 !important
+	text-align: inherit
+
+#avatar-container
+	.file-input
+		.file-preview
+			+circle-size($avatar-size-preview)
+
+.profile-picture, .banner-profile-picture
+	min-height: $avatar-big-preview
+	width:inherit
+
+p.legend
+	@extend legend
+	font-size: 38px
+
+div.legend:nth-child(1n+0)
+	@extend p.legend
+
+/** RECORDS **/
+.records-product-list
+	padding: 0
+
+/** NOTIFICATIONS **/
+.notification-line
+	display: inherit
+	border-bottom: 1px solid lighten($system-color, 20%)
+	padding: 8px
+	cursor: pointer
+	background-color: white
+	&.notif-new
+		background-color: transparentize($salsabor-red, 0.85)
+	&:hover
+		background-color: transparentize($salsabor-red, 0.75)
+
+.read-all
+	cursor: pointer
+	float: right
+	padding-right: 5px
+
+.notification-content
+	margin-bottom: 2px
+	text-decoration: none
+	color: black
+	display: block
+
+.notif-hour
+	color: $system-color !important
+
+/** TASKS **/
+.task-line
+	@extend .notification-line
+	&:hover
+		background-color: white
+	margin-bottom: 10px
+	border-radius: 0
+	padding: 0
+	.panel-heading
+		padding: 8px
+	.panel-body
+		cursor: default
+		background-color: darken(white, 10%)
+
+.task-title
+	font-size: 16px
+
+.task-target
+	margin-top: -12px
+
+.task-hour
+	@extend .notif-hour
+	font-style: italic
+
+.new-task-text
+	padding: 17px
+	font-size: 1.4em
+	&:hover
+		color: white
+
+.comment-unit
+	margin-bottom: 10px
+
+.glyphicon-description
+	float: left
+	margin-right: 5px
+
+.message-author
+	font-weight: 700
+
+.message-container
+	background-color: white
+	border-radius: 4px
+	padding: 10px
+	margin-left: 25px
+
+.message-details
+	@extend .task-hour
+	margin: 0
+	margin-left: 25px
+	.comment-options
+		font-style: normal
+		cursor: pointer
+		&:hover
+			text-decoration: underline
+
+.comment-span
+	padding-top: 4px
+
+.deadline-span
+	&:not(.deadline-maturity-span)
+		padding: 4px 0 4px 10px
+		&:hover
+			text-decoration: underline
+	&.deadline-near
+		background-color: $warning-color
+	&.deadline-expired
+		background-color: $danger-color
+		color: white
+		font-weight: 700
+
+.deadline-expired
+	background-color: $danger-color
+	color: white
+	font-weight: 700
+
+.deadline-maturity-span
+	padding-right: 10px
+
+.maturities-button
+	margin: 10px
+
+.maturities-incomplete
+	font-size: 1.4em
+	font-weight: 700
+	display: none
+	margin-left: 10px
+	span
+		color: $danger-color
+
+.main-maintenance
+	margin-top: 80px
+	text-align: center
+	img
+		width: 20%
+
+.maintenance-brand
+	font-size: 100px
+	font-family: 'globersemibold_free'
+	font-weight: 800
+	margin-bottom: 15px
+	color: $salsabor-red
+
+.social-space
+	align-content: center
+	text-align: center
+	div>p
+		font-size: 32px
+
+.session-nav
+	margin-bottom: 10px
+
+#last-edit
+	margin-bottom: 0
+	font-style: italic
+	text-align: center
+
+.banner-container
+	height: 35vh
+	overflow: hidden
+	position: relative
+	img
+		width: 100%
+	@media screen and (max-width: $break-small)
+		height: 44.6%
+
+#banner
+	margin-top: -7%
+	.file-preview-frame
+		border-radius: 0
+		box-shadow: none
+		overflow: visible
+		width: 100% !important
+	@media screen and (max-width: $break-medium)
+		.file-preview-frame
+			img
+				margin-top: -30%
+			.file-default-preview
+				img
+					margin-top: -30%
+
+.user-profile-container
+	margin-top: 1vh
+	min-height: 150px
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	padding: 30px
+	z-index: 2
+	@media screen and (max-width: $break-small)
+		padding: 30px 0
+
+.user-profile-name
+	padding: 10px
+	font-size: 32px
+	span:not(.glyphicon)
+		background-color: transparentize(black, 0.25)
+		padding : 10px
+		color: white
+
+.user-profile-code
+	@extend .user-profile-name
+	font-size: 18px
+
+.login-space
+	background-color: white
+	padding: 20px
+
+.login-help
+	text-align: center
+
+.row-location
+	border-bottom: 1px solid lighten($system-color, 30%)
+	margin-bottom: 15px
+
+.room-rectangle
+	height: 20px
+	border: 2px solid black
+	cursor: pointer
+
+.room-filter, .location-filter, .type-filter
+	cursor: pointer
+	padding: 5px 0 5px 5px
+	&.activated
+		font-weight: 800
+	&:hover
+		background-color: darken($system-color, 10%)
+		color: white
+
+.cube-filter
+	height: 15px
+	width: 15px
+	margin: 2px
+	@extend .glyphicon-description
+	&.disabled
+		opacity: 0
+		border: 1px solid $system-color
+
+.filter-title
+	@extend .product-title
+	@extend .room-filter
+	padding-bottom: 7px
+	height: 34px
+
+.filter-name
+	margin: 0 !important
+
+.chart
+	background-color: white
+
+.price-display
+	font-size: 25px
+	color: $salsabor-red
+	height: inherit
+
+.monitoring-infos
+	font-size: 1.4em
+
+.photo-space
+	margin-right: 0.008%
+
+.user-loading-results
+	text-align: center
+
+.loading-indicator
+	width: 100%
+
+.load-identity
+	font-size: 16px
+	font-weight: 700
+
+.user-result
+	padding: 10px 0 0
+
+.selectable
+	cursor: pointer
+	&:hover
+		background-color: darken($system-color, 10%)
+	&.selected
+		background-color: lighten($success-color, 15%)
+		&:hover
+			background-color: lighten($success-color, 5%)
+
+.log-picture
+	height: 20px
+	margin-right: 5px
+
+.centered
+	text-align: center
+
+.log-row
+	padding-bottom: 9px
+	padding-top: 10px
+	border-bottom: 1px solid transparentize($system-color, 0.4)
+
+.timestamp
+	@extend .notif-hour
+	font-size: .85em
+	padding-left: 5px
+
+.invoice-actions
+	display: none
+	padding-bottom: 10px
+	margin-bottom: 10px
+	border-top: 1px solid $system-color
+	border-bottom: 1px solid $system-color
+	p:first-child
+		padding-top: 10px
+		font-size: 1.2em
+		font-weight: 700
+
+.invoice-filter, .dates-filter
+	&:hover
+		opacity: 1 !important
+
+#sub-legend-helper
+	font-size: .875em
+	color: $system-color
+	letter-spacing: .04em
+	padding-left: 5px
+	font-weight: 200

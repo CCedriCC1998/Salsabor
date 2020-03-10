@@ -1,0 +1,111 @@
+@font-face{
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	src: local('OpenSans Regular'), local('OpenSans-Regular'), url('fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+*{
+	font-family: 'Open Sans' sans-serif;
+}
+
+.navbar-brand{
+	color: #FFF;
+	font-weight: 800;
+	font-size: 2em;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.span-mandatory {
+	color: red;
+}
+
+.nav-tabs>li>a{
+	color: #81002B;
+}
+
+.nav-pills > li{
+	cursor: pointer;
+}
+
+.nav-pills > li.active > a{
+	background-color: #FAB913 !important;
+}
+
+.nav-pills > li.active > a:hover{
+	background-color: #E5A910!important;
+}
+
+.nav-pills > li > a {
+	color: #FAB913;
+}
+
+/** To be in front of the lightboxes **/
+.ui-widget{
+	z-index: 3 !important;
+}
+
+.table-responsive{
+	overflow-x: visible;
+}
+
+#prix_calcul{
+	color: #a9023a;
+	height: inherit;
+}
+
+.confirm-add {
+	text-transform: uppercase;
+}
+
+.error-alert {
+	color: #720026;
+}
+
+.fc-event{
+	cursor: pointer !important;
+}
+
+.payment-done{
+	color: green;
+}
+
+.payment-due{
+	color: red;
+}
+
+#display-planning {
+	margin-top: 10px;
+}
+
+.content-right {
+	float: right;
+}
+
+.alert-custom {
+	z-index:1031;
+	position: fixed;
+	top: 1%;
+	left: 40%;
+	width: 30%;
+	text-align: center;
+}
+.error-messages {
+	color: red !important;
+}
+
+.main-section {
+	font-family: 'globersemibold_free';
+}
+
+#shopping-cart-price {
+	padding: 10px 0;
+	text-align: right;
+	font-size: 20px;
+}
+
+.popover-content {
+	max-height: 259px;
+	overflow-y: scroll;
+}

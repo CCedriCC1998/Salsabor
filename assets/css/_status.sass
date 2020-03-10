@@ -1,0 +1,50 @@
+=status-border($width, $color)
+	border-top: $width solid $color
+	border-bottom: $width solid $color
+	background-color: transparentize($color, 0.7)
+
+=panel-decoration($color)
+	&.panel-record
+		+status-border(3px, $color)
+	&:not(.panel-record)
+		border-left: 7px solid $color
+	&:not(.options-shown) &:not(.maturity-item)
+		&:hover
+			background-color: $color
+
+.status-over
+	+panel-decoration($danger-color)
+
+.status-pre-success
+	+panel-decoration($pre-success-color)
+
+.status-success
+	+panel-decoration($success-color)
+
+.status-partial-success
+	+panel-decoration($warning-color)
+
+.status-new
+	+panel-decoration($system-color)
+
+.product-soon
+	font-weight: 700
+	background-color: transparentize(black, 0.7)
+
+.task-new
+	border: 1px solid $salsabor-red !important
+	border-left: 15px solid $salsabor-red !important
+	.panel-heading
+		&:hover
+			background-color: transparentize($salsabor-red, 0.91) !important
+
+.task-old
+	border: 1px solid $success-color !important
+	border-left: 15px solid $success-color !important
+	.panel-heading
+		&:hover
+			background-color: transparentize($success-color, 0.91) !important
+
+.disabled
+	color: $system-color !important
+	opacity: 0.4

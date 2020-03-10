@@ -1,0 +1,23 @@
+=animation-holder($color)
+	display: none
+	position: absolute
+	background-color: $color
+	height: 100%
+	width: 100%
+	padding-top: 15px
+	z-index: 9999
+	text-align: center
+
+.delete-animation-holder
+	+animation-holder($danger-color)
+	margin: -15px
+	color: white
+	border-radius: 5px
+
+.hold-text
+	font-size: 1.1em
+	padding: 0 !important
+	margin-bottom: 5px
+
+.hold-help
+	font-size: .8em
